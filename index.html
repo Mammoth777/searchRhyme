@@ -5,29 +5,43 @@
 
 <title>查韵工具</title>
 <style>
+html, body{
+	margin: 0;
+	padding: 0;
+	background: #fafafa;
+}
 input{
 	outline: none;
-	-webkit-apperance: none;
+	-webkit-appearance: none;
+	border: 0;
+	border-bottom: 1px solid skyblue;
+	padding: 2px 5px;
+	font-size: 16px;
+	margin: 10px 25px;
+	background: transparent;
 }
 #con{
 	margin: 0 auto;
 	max-width: 400px;
-	font-size: 14px;
-	font-weight: 300;
+	font-size: 16px;
 	font-family: "楷体";
+	padding: 0 25px;
 }
 strong{
 	background: yellow;
-	font-size: 15px;
+	font-size: 17px;
 }
 .pink{
 	background: pink;
 }
 
+hr{
+}
+
 </style>
 </head>
 <body>
--> <input id="in" autofocus />
+<input id="in" autofocus placeholder="这里是输入框"/>
 <div id="con"></div>
 </body>
 <script>
@@ -53,7 +67,7 @@ const dict = [
 		content: "【衣期韵：平声】衣低堤几讥玑肌鸡姬基期犄畸箕眯批坯披砒沏妻栖凄期梯蹊欺西希兮稀熙牺犀曦伊铱医依漪厘狸离梨犁鹂漓璃黎弥迷眯谜糜靡尼泥倪霓皮啤琵脾齐祈其奇歧脐畦崎骑棋提啼题蹄仪夷宜贻沂胰姨蛇移遗颐彝逼滴圾积击缉激劈霹七柒戚缉漆剔踢夕吸汐昔析矽息悉惜晰锡熄膝壹揖鼻狄迪的敌涤笛嫡翟及吉汲级极即亟革急疾棘集辑瘠藉籍给脊习席袭媳檄【衣期韵：上声】比彼鄙抵底砥几己挤礼李里鲤理米靡拟你否痞岂企启起体洗铣喜已以尾矣蚁椅笔给脊匹癖劈乞乙【衣期韵：去声】币闭庇泌毖陛毙敝婢蓖秘蔽脾痹弊避臂比费地弟第帝蒂缔递计记伎纪技系忌际妓季剂济既继祭悸寄蓟霁暨冀厉吏丽励利例隶荔俐粒泥腻屁媲气弃妻契砌器剃屉涕替嚏戏系细亿义艺忆艾议衣异易诣谊翌裔意臆毅必毕辟碧壁的迹寂绩稷力历立沥枥栗砾觅密蜜幂匿溺辟僻譬迄讫泣惕隙一壹屹亦抑邑佚役译逆易佾驿绎弈奕逸益溢乙"
 	},
 	{
-		title: "支思韵 ",
+		title: "支思韵 -i",
 		content: "【支思韵：平声】痴差疵趾尸师诗虱狮施司丝私思斯撕嘶之知支氏芝吱枝肢脂蜘仔吱孜咨姿兹资淄弛驰迟持匙词辞慈磁雌时吃失虱湿只汁织拾十石实识食蚀执直侄值职植殖掷【支思韵：上声】齿侈耻此史矢豕始驶屎死止址只咫旨指酯纸趾子仔籽姊紫梓滓尺【支思韵：去声】炽翅次伺刺赐士氏示世仕市式似事势侍试视柿拭是恃嗜誓噬巳四寺似饲驷食肆嗣思至志识帜制治峙致痔智滞置稚自字渍恣斥饬赤拭饰适室释质桎挚秩掷窒炙日"
 	},
 	{
