@@ -137,18 +137,25 @@ input.addEventListener("keyup", function() {
 			findIndex.push(i);
 		}
 	}
+	
 	let str = '';
-	for(let i = 0; i < findIndex.length; i ++){
-		const find = dict[findIndex[i]];
-		let content = find.content.replace(/【(.+?)】/g, "<hr />【$1】<br />");
-		content = content.replace(new RegExp(value, "g"), `<strong class="${value === '周' ? 'pink' : ''}">${value}</strong>`);
-		str += `
-			<h3>${find.title}</h3>
-			<p>${content}</p>
-		`
+	if (findIndex.length === 0) {
+		str = "<h3>竟然没找到， 换个字吧~</h3>"
+	} else {
+		for(let i = 0; i < findIndex.length; i ++){
+			const find = dict[findIndex[i]];
+			let content = find.content.replace(/【(.+?)】/g, "<hr />【$1】<br />");
+			content = content.replace(new RegExp(value, "g"), `<strong class="${value === '周' ? 'pink' : ''}">${value}</strong>`);
+			str += `
+				<h3>${find.title}</h3>
+				<p>${content}</p>
+			`
+		}
 	}
 	con.innerHTML = str;
-	this.blur();
+})
+con.addEventListener("touchstart", function(){
+	input.blur;
 })
 
 </script>
